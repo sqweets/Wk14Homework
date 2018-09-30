@@ -90,6 +90,10 @@ function onDateChange(event) {
       rows[i].removeAttribute("style");
     }
   }
+  // Reset other filters
+  document.getElementById("state-input").value="";
+  document.getElementById("shape-input").value="";
+  document.getElementById("country-input").value="";
 };
 
 
@@ -117,6 +121,11 @@ function onStateChange(event) {
       rows[i].removeAttribute("style");
     }
   }
+
+  // Reset other filters
+  document.getElementById("date-input").value="";
+  document.getElementById("shape-input").value="";
+  document.getElementById("country-input").value="";
 };
 
 
@@ -144,6 +153,10 @@ function onShapeChange(event) {
       rows[i].removeAttribute("style");
     }
   }
+  // Reset other filters
+  document.getElementById("date-input").value="";
+  document.getElementById("state-input").value="";
+  document.getElementById("country-input").value="";
 };
 
 
@@ -171,5 +184,9 @@ function onCountryChange(event) {
       rows[i].removeAttribute("style");
     }
   }
+  // Reset other filters
+  document.getElementById("date-input").value="";
+  document.getElementById("shape-input").value="";
+  document.getElementById("state-input").value="";
 };
 
