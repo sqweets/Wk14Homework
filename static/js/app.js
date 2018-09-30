@@ -2,6 +2,8 @@
 
 var ufoColumns = ["datetime", "city", "state", "country", "shape", "durationMinutes" ,"comments"];
 
+//**************************************
+//**************************************
 function create_table(data, columns) {
     var table = d3.select('#table-append').append('table').attr("class", "table table-bordered table-hover");
     var thead = table.append('thead');
@@ -38,6 +40,10 @@ function create_table(data, columns) {
 // render the table
 create_table(data, ufoColumns);
 
+
+
+//**************************************
+//**************************************
 function onDateChange(event) {
   var dateVar = event.target.value;
   var filterDateFormatted = "";
@@ -86,50 +92,84 @@ function onDateChange(event) {
   }
 };
 
-function onStateChange(event) {
-  var selection = event.target.value;
 
-  // Remove rows that don't match the date value
-  var rows = document.getElementsByClassName("table")[0].tBodies[0].rows;
+// //**************************************
+// //**************************************
+// function onStateChange(event) {
+//   var selection = event.target.value;
 
-  if (selection !== "") { 
-    for (var i = 0; i < rows.length; i++) {
-      if (rows[i].cells[2].innerText.toUpperCase() != selection) {
-        // Set display to none
-        rows[i].style.display = "none";
-      } else {
-        // Display again
-        rows[i].removeAttribute("style");
-      }
-    }
-  } else {
-    for (var i = 0; i < rows.length; i++) {
-      // Display all again
-      rows[i].removeAttribute("style");
-    }
-  }
-};
+//   // Remove rows that don't match the date value
+//   var rows = document.getElementsByClassName("table")[0].tBodies[0].rows;
 
-function onShapeChange(event) {
-  var selection = event.target.value;
+//   if (selection !== "") { 
+//     for (var i = 0; i < rows.length; i++) {
+//       if (rows[i].cells[2].innerText.toUpperCase() != selection) {
+//         // Set display to none
+//         rows[i].style.display = "none";
+//       } else {
+//         // Display again
+//         rows[i].removeAttribute("style");
+//       }
+//     }
+//   } else {
+//     for (var i = 0; i < rows.length; i++) {
+//       // Display all again
+//       rows[i].removeAttribute("style");
+//     }
+//   }
+// };
 
-  // Remove rows that don't match the date value
-  var rows = document.getElementsByClassName("table")[0].tBodies[0].rows;
 
-  if (selection !== "") { 
-    for (var i = 0; i < rows.length; i++) {
-      if (rows[i].cells[4].innerText != selection) {
-        // Set display to none
-        rows[i].style.display = "none";
-      } else {
-        // Display again
-        rows[i].removeAttribute("style");
-      }
-    }
-  } else {
-    for (var i = 0; i < rows.length; i++) {
-      // Display all again
-      rows[i].removeAttribute("style");
-    }
-  }
-};
+// //**************************************
+// //**************************************
+// function onShapeChange(event) {
+//   var selection = event.target.value;
+
+//   // Remove rows that don't match the date value
+//   var rows = document.getElementsByClassName("table")[0].tBodies[0].rows;
+
+//   if (selection !== "") { 
+//     for (var i = 0; i < rows.length; i++) {
+//       if (rows[i].cells[4].innerText != selection) {
+//         // Set display to none
+//         rows[i].style.display = "none";
+//       } else {
+//         // Display again
+//         rows[i].removeAttribute("style");
+//       }
+//     }
+//   } else {
+//     for (var i = 0; i < rows.length; i++) {
+//       // Display all again
+//       rows[i].removeAttribute("style");
+//     }
+//   }
+// };
+
+
+// //**************************************
+// //**************************************
+// function onCountryChange(event) {
+//   var selection = event.target.value;
+
+//   // Remove rows that don't match the date value
+//   var rows = document.getElementsByClassName("table")[0].tBodies[0].rows;
+
+//   if (selection !== "") { 
+//     for (var i = 0; i < rows.length; i++) {
+//       if (rows[i].cells[3].innerText.toUpperCase() != selection) {
+//         // Set display to none
+//         rows[i].style.display = "none";
+//       } else {
+//         // Display again
+//         rows[i].removeAttribute("style");
+//       }
+//     }
+//   } else {
+//     for (var i = 0; i < rows.length; i++) {
+//       // Display all again
+//       rows[i].removeAttribute("style");
+//     }
+//   }
+// };
+
