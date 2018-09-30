@@ -115,6 +115,10 @@ label {
   font-weight: bold;
 }
 
+#date-input {
+  font-size: 0.9rem;
+}
+
 #table-area th {
   text-align: center;
 }
